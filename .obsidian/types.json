@@ -1,0 +1,11 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "购买日期": "date",
+    "购买价格": "number",
+    "是否退役": "checkbox",
+    "退役日期": "date"
+  }
+}

@@ -1,0 +1,100 @@
+/*隐藏表头*/
+
+.workspace-leaf-content[data-mode="preview"]
+.markdown-preview-view.cards
+.metadata-container{
+    display: none;
+
+}
+
+
+
+/* 卡片容器 */
+.card-container {
+    display: flex;
+    flex-direction: column; /* 垂直排列卡片 */
+    gap: 10px; /* 卡片之间的间距 */
+    margin: 20px 0;
+    padding: 0 20px; /* 增加左右间距 */
+}
+
+/* 单张卡片 */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr; /* 定义6列布局 */
+    align-items: center; /* 垂直居中 */
+    padding: 10px 15px; /* 减少内边距 */
+    border-radius: 8px; /* 轻微圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 减弱阴影 */
+    background-color: #00C58E; /* 默认背景为绿色 */
+    color: white; /* 内容字体为白色 */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 鼠标悬停时的阴影效果 */
+}
+
+/* 已退役的卡片 */
+.retired-card {
+    background-color: #B0B0B0; /* 灰色背景 */
+    color: #333; /* 字体颜色设置为深灰 */
+}
+
+.retired-card:hover {
+    transform: none; /* 鼠标悬停时不再有位移效果 */
+    box-shadow: none; /* 鼠标悬停时不再有阴影放大效果 */
+}
+
+/* 每一列内容样式 */
+.card-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* 图标部分 */
+.card-icon {
+    font-size: 28px; /* 图标大小 */
+}
+/* 状态样式 */
+/* 使用中状态样式 */
+.using-state {
+    display: inline-block;
+    color: white;
+    /*background-color: yellow;*/
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold; /* 加粗 */
+}
+
+/* 已退役状态样式 */
+.retired-state {
+    display: inline-block;
+    color: black;
+    /*background-color: #721c24; !* 深红色背景 *!*/
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold; /* 加粗 */
+}
+
+/* 通用状态样式 */
+.status {
+    font-weight: bold; /* 确保所有状态文字加粗 */
+}
